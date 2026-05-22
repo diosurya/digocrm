@@ -1,16 +1,16 @@
 <!-- Dashboard (Always Visible) -->
 <a href="{{ route('dashboard') }}" 
    title="Dashboard"
-   class="{{ request()->routeIs('dashboard') ? 'bg-brand text-white shadow-lg shadow-brand/20' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900' }} group flex items-center px-3 py-2.5 text-sm font-medium rounded-xl transition-all duration-300">
-    <i class="fa-solid fa-gauge-high text-lg w-6 shrink-0"></i>
+   class="{{ request()->routeIs('dashboard') ? 'text-brand font-black' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900' }} group flex items-center px-3 py-2.5 text-sm font-medium rounded-xl transition-all duration-300">
+    <i class="fa-solid fa-gauge-high text-lg w-6 shrink-0 {{ request()->routeIs('dashboard') ? 'text-brand' : '' }}"></i>
     <span x-show="!sidebarCollapsed" class="ml-3 transition-opacity">Dashboard</span>
 </a>
 
 <!-- Customer (Parent Menu) -->
 <a href="{{ route('customers.index') }}" 
    title="Customer"
-   class="{{ request()->routeIs('customers.*') ? 'bg-brand text-white shadow-lg shadow-brand/20' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900' }} group flex items-center px-3 py-2.5 mt-1 text-sm font-medium rounded-xl transition-all duration-300">
-    <i class="fa-solid fa-address-book text-lg w-6 shrink-0"></i>
+   class="{{ request()->routeIs('customers.*') ? 'text-brand font-black' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900' }} group flex items-center px-3 py-2.5 mt-1 text-sm font-medium rounded-xl transition-all duration-300">
+    <i class="fa-solid fa-address-book text-lg w-6 shrink-0 {{ request()->routeIs('customers.*') ? 'text-brand' : '' }}"></i>
     <span x-show="!sidebarCollapsed" class="ml-3 transition-opacity">Customer</span>
 </a>
 
